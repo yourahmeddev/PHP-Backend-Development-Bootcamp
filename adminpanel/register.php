@@ -75,7 +75,7 @@
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="login.php">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <scrcipt src="js/sb-admin-2.min.js"></scrcipt>
     <!-- php backend code for Register functionality -->
     <?php
     // including database connection file
@@ -102,8 +102,8 @@
          $firstName = $_POST['first_name'];
          $lastName = $_POST['last_name'];
          $email = $_POST['email'];
-         $password = $_POST['password'];
-         $repeatPassword = $_POST['repeat_password'];
+          $password = $_POST['password'];
+          $repeatPassword = $_POST['repeat_password'];
          if($password == $repeatPassword){
             $query = "insert into users (first_name, last_name, email, password) values('$firstName','$lastName','$email','$password')";
             $result = mysqli_query($con, $query);
